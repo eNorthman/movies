@@ -1,0 +1,15 @@
+overview
+<movies-search (onSearch)="searchMovies($event)"></movies-search>
+
+<table >
+    <thead>
+    <tr>
+      <th>Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{movie.Title}}</td>
+    </tr>
+    </tbody>
+  </table>
