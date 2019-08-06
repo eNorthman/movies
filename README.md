@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
+## Configuration
+
+Add a file `src/api-key.json` with its contents for example: `"12cba28"` (replace with a valid api key from omdbapi.com).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

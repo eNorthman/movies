@@ -1,3 +1,5 @@
-export const HOMEPAGE_API_CONSTANTS = {
-  getMovieByTitle: (title: string): string => `http://www.omdbapi.com/?apikey=&s=${title}&page=2`,
+import { environment } from 'src/environments/environment';
+
+export const API_CONSTANTS = {
+  getMovieByTitle: (title: string): string => `http://www.omdbapi.com/?apikey=${environment.apiKey}&s=${title}&page=2`,
 };

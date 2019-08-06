@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../../services/movie.service';
-import { HOMEPAGE_API_CONSTANTS } from './constants/homepage.constants';
+import { API_CONSTANTS } from './constants/homepage.constants';
 import { MovieApi } from './models/movie-api.model';
 
 @Component({
@@ -22,10 +22,10 @@ export class HomepageOverviewComponent implements OnInit {
   }
 
   private getMovieBytitle(title: string): void {
-    const endpoint = HOMEPAGE_API_CONSTANTS.getMovieByTitle(title);
+    const endpoint = API_CONSTANTS.getMovieByTitle(title);
     this.movieService.getAllMovieByTitle(endpoint).subscribe((result: MovieApi) => {
       this.movies = result.Search;
-    })
+    });
   }
 
 }
