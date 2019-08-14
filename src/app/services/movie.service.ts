@@ -5,6 +5,7 @@ import { catchError } from 'rxjs/operators';
 
 @Injectable()
 export class MovieService {
+
   constructor(
     private readonly httpClient: HttpClient,
   ) {}

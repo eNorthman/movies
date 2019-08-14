@@ -1,5 +1,8 @@
 import { environment } from 'src/environments/environment';
 
+const apiUrl = 'http://www.omdbapi.com/'
+
 export const API_CONSTANTS = {
-  getMovieByTitle: (title: string): string => `http://www.omdbapi.com/?apikey=${environment.apiKey}&s=${title}&page=2`,
+  getMovieBySearch: (title: string, type: string = 'movie'): string => `${apiUrl}?apikey=${environment.apiKey}&s=${title}&page=1&${type}`,
+  getMovieDetails: (title: string = 'Game of Thrones'): string => `${apiUrl}?apikey=${environment.apiKey}&t=${title}`,
 };

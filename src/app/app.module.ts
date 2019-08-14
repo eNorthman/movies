@@ -6,6 +6,7 @@ import { AppRoutingModule } from './/app-routing.module';
 
 // Generic reuseable components like the header/menu component.
 import { MenuComponent } from './components/menu/menu.component';
+import { CardService } from './services/card.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { MenuComponent } from './components/menu/menu.component';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    CardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

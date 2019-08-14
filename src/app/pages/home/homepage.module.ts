@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MovieService } from '../../services/movie.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CardGridComponent } from 'src/app/components/card-grid/card-grid.component';
+import { CardComponent } from 'src/app/components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     SearchComponent,
     HomepageOverviewComponent,
     HomepageDetailComponent,
+    CardGridComponent,
+    CardComponent,
   ],
   imports: [UsersRoutingModule, FormsModule, CommonModule, HttpClientModule   ],
   providers: [MovieService],

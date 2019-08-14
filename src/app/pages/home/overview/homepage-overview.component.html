@@ -1,10 +1,4 @@
 overview
 <movies-search (search)="searchMovies($event)"></movies-search>
 
-<ul>
-  <li *ngFor="let movie of movies">
-    <img src="{{movie.Poster}}" alt="Poster: {{movie.Title}}">
-    <span>{{movie.Title}}</span>
-    <span>{{movie.Year}}</span>
-  </li>
-</ul>
+<movies-card-grid [movies]="movies"></movies-card-grid>
