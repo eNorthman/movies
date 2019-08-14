@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../../services/movie.service';
 import { API_CONSTANTS } from './constants/homepage.constants';
-import { MovieApi } from './models/movie-api.model';
+import { MovieApi, Movie } from './models/movie-api.model';
 
 @Component({
   templateUrl: './homepage-overview.component.html',
 })
 export class HomepageOverviewComponent implements OnInit {
-  public movies: object[] = [];
+  public movies: Movie[] = [];
 
   constructor(
     private readonly movieService: MovieService

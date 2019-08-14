@@ -1,15 +1,10 @@
 overview
 <movies-search (search)="searchMovies($event)"></movies-search>
 
-<table >
-    <thead>
-    <tr>
-      <th>Title</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let movie of movies">
-      <td>{{movie.Title}}</td>
-    </tr>
-    </tbody>
-  </table>
+<ul>
+  <li *ngFor="let movie of movies">
+    <img src="{{movie.Poster}}" alt="Poster: {{movie.Title}}">
+    <span>{{movie.Title}}</span>
+    <span>{{movie.Year}}</span>
+  </li>
+</ul>
