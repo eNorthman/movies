@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
+
+$font: 'Roboto Slab', serif;
+$white: #fff;
+$grey-light: #9B9B9B;
+$grey-dark: #212121;
+$black: #000;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font;
+  background: $grey-dark;
+  color: $white;
+}
+
+.header {
+  width: 100vw;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  color: $white;
+  text-decoration: none;
+  font-size: 80px;
+  font-weight: 700;
+  &__thin {
+    font-weight: 300;
+  }
+}

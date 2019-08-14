@@ -5,13 +5,13 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 
 // Generic reuseable components like the header/menu component.
-import { MenuComponent } from './components/menu/menu.component';
+import { HeaderComponent } from './components/header/header.component';
 import { CardService } from './services/card.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
