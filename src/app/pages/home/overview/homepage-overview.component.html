@@ -1,3 +1,7 @@
-<movies-search [tall]="false" (search)="searchMovies($event)"></movies-search>
+<movies-detail></movies-detail>
 
-<movies-card-grid [movies]="movies"></movies-card-grid>
+<div class="container">
+  <movies-header></movies-header>
+  <movies-search [tall]="false" (search)="searchMovies($event)"></movies-search>
+  <movies-card-grid [movies]="movies"></movies-card-grid>
+</div>

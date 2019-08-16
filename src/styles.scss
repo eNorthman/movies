@@ -22,6 +22,9 @@ $padding-body: 50px;
 body {
   background: $grey-dark;
   color: $white;
+}
+
+.container {
   padding-left: $padding-body;
   padding-right: $padding-body;
 }
@@ -141,6 +144,72 @@ body {
 
     &:focus {
       outline: none;
+    }
+  }
+}
+
+.details {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  background: $grey-dark;
+  align-items: center;
+  &--show {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    font-size: 100px;
+    background: rgba($grey-dark, 0.5);
+    color: $white;
+    top: $padding-body;
+    right: $padding-body;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__poster {
+    height: 100%;
+    width: 37.5vw;
+    margin-right: 50px;
+    flex-shrink: 0;
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-meta {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font-weight: 700;
+      font-size: 80px;
+    }
+    &__year {
+      font-weight: 300;
+      font-size: 80px;
+    }
+    &__block {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    &__heading {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 40px;
+      width: 100%;
+    }
+    &__content {
+      font-weight: light;
+      font-size: 40px;
     }
   }
 }

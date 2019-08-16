@@ -10,6 +10,7 @@ import { MovieService } from '../../services/movie.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CardGridComponent } from 'src/app/components/card-grid/card-grid.component';
 import { CardComponent } from 'src/app/components/card/card.component';
+import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CardComponent } from 'src/app/components/card/card.component';
     HomepageDetailComponent,
     CardGridComponent,
     CardComponent,
+    HeaderComponent,
   ],
   imports: [UsersRoutingModule, FormsModule, CommonModule, HttpClientModule   ],
   providers: [MovieService],

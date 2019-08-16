@@ -1,1 +1,33 @@
-details
+<div
+  class="details"
+  [class.details--show]="show"
+>
+  <button type="button" class="details__close" (click)="show = false">
+    <i class="fas fa-times-circle"></i>
+  </button>
+
+  <div class="details__poster">
+    <img
+      class="details__image"
+      src="{{poster}}"
+    />
+  </div>
+  <div class="details-meta">
+    <span class="details-meta__title">{{title}}</span>
+    <span class="details-meta__year">{{year}}</span>
+    <div
+      *ngIf="synopsis"
+      class="details-meta__synopsis details-meta__block"
+    >
+      <span class="details-meta__heading">Synopsis</span>
+      <span class="details-meta__content">{{synopsis}}</span>
+    </div>
+    <div
+      *ngIf="actors"
+      class="details-meta__actors details-meta__block"
+    >
+      <span class="details-meta__heading">Actors</span>
+      <span class="details-meta__content">{{actors}}</span>
+    </div>
+  </div>
+</div>
