@@ -9,6 +9,7 @@ import { CardService } from 'src/app/services/card.service';
 })
 export class CardComponent implements OnInit {
   @Input() movie: Movie;
+  public favorite = false;
 
   constructor(private readonly cardService: CardService) { }
 

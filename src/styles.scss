@@ -7,7 +7,10 @@ $grey-light: #9B9B9B;
 $grey-dark: #212121;
 $black: #000;
 
+$padding-body: 50px;
+
 * {
+  font-family: $font;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -17,13 +20,14 @@ $black: #000;
 }
 
 body {
-  font-family: $font;
   background: $grey-dark;
   color: $white;
+  padding-left: $padding-body;
+  padding-right: $padding-body;
 }
 
 .header {
-  width: 100vw;
+  width: 100%;
   height: 160px;
   display: flex;
   justify-content: center;
@@ -37,5 +41,106 @@ body {
   font-weight: 700;
   &__thin {
     font-weight: 300;
+  }
+}
+
+.search-form {
+  height: 80px;
+  border-radius: 10px;
+  width: 100%;
+  background: $white;
+  display: flex;
+  color: $grey-dark;
+
+  &--tall {
+    height: 100px;
+  }
+
+  &__input {
+    background: none;
+    flex-grow: 1;
+    font-size: 40px;
+    padding: 15px 25px;
+
+    &::placeholder {
+      color: $grey-light;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__button {
+    background: none;
+    justify-self: right;
+    padding: 15px 35px;
+    cursor: pointer;
+
+    &-text {
+      display: none;
+    }
+    &-icon {
+      font-size: 40px;
+    }
+  }
+}
+
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 25px;
+  flex-basis: 50px;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+.movie {
+  width: 400px;
+  box-shadow: 2px 2px 4px 0 rgba($black, 0.5);
+  font-size: 20px;
+  margin: 25px;
+
+  &__poster {
+    height: 600px;
+  }
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__body {
+    height: 80px;
+    background: $black;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+  &__year {
+    font-weight: 300;
+  }
+
+  &__favorite {
+    background: none;
+    color: $white;
+    font-size: 30px;
+    width: 60px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
