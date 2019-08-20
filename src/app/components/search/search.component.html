@@ -2,6 +2,7 @@
   class="search-form"
   [class.search-form--tall]="tall"
   (submit)="doSearch()"
+  #searchForm="ngForm"
 >
   <input
     class="search-form__input"

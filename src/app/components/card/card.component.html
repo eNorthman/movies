@@ -12,7 +12,7 @@
     class="movie__favorite"
     (click)="favorite = !favorite"
     >
-      <span *ngIf="!favorite">
+      <span *ngIf="!favorite" (click)="addToFavorites()">
         <i class="far fa-star"></i>
       </span>
       <span *ngIf="favorite">

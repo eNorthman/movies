@@ -105,6 +105,7 @@ body {
 
   &__poster {
     height: 600px;
+    cursor: pointer;
   }
   &__image {
     object-fit: cover;

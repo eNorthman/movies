@@ -17,7 +17,11 @@ export class CardComponent implements OnInit {
   }
 
   public cardClicked(): void {
-    this.cardService.openCard();
+    this.cardService.openCard(this.movie);
+  }
+
+  public addToFavorites(): void {
+
   }
 
 }

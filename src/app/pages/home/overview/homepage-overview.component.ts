@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MovieService } from '../../../services/movie.service';
 import { API_CONSTANTS } from './constants/homepage.constants';
 import { MovieApi, Movie } from './models/movie-api.model';
-import { CardService } from 'src/app/services/card.service';
+import { CardService, CardObject } from 'src/app/services/card.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -10,6 +10,8 @@ import { Subscription } from 'rxjs';
 })
 export class HomepageOverviewComponent implements OnInit, OnDestroy {
   public movies: Movie[] = [];
+  public show = false;
+  public selectedMovie: Movie;
 
   private subscription: Subscription;
 
@@ -19,9 +21,11 @@ export class HomepageOverviewComponent implements OnInit, OnDestroy {
   ) { }
 
   public ngOnInit() {
-    this.subscription = this.cardService.cardClicked$.subscribe((show) => {
-      if (show) {
+    this.subscription = this.cardService.cardClicked$.subscribe((cardObject: CardObject) => {
+      if (cardObject.show) {
         // open card here
+        this.show = cardObject.show;
+        this.selectedMovie = cardObject.movie;
       } else {
         // close card here.
       }
