@@ -10,12 +10,12 @@
     <button
     type="button"
     class="movie__favorite"
-    (click)="favorite = !favorite"
+    (click)="updateFavorite($event)"
     >
-      <span *ngIf="!favorite" (click)="addToFavorites()">
+      <span *ngIf="!movie.Favorite">
         <i class="far fa-star"></i>
       </span>
-      <span *ngIf="favorite">
+      <span *ngIf="movie.Favorite">
       <i class="fas fa-star"></i>
       </span>
     </button>
