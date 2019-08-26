@@ -6,8 +6,7 @@ import { HomepageModule } from './pages/home/homepage.module';
 export function getHomePageModule() { return HomepageModule; }
 
 const routes: Routes = [
-  { path: 'home', loadChildren: () => import('./pages/home/homepage.module').then(m => m.HomepageModule) },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: '', loadChildren: () => import('./pages/home/homepage.module').then(m => m.HomepageModule) },
 ];
 
 @NgModule({
