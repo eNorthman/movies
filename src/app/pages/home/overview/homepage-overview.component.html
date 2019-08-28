@@ -1,7 +1,3 @@
-<movies-detail *ngIf="show" [selectedMovie]="selectedMovie"></movies-detail>
-
 <div class="container">
   <movies-header></movies-header>
-  <movies-search [tall]="false" (search)="searchMovies($event)"></movies-search>
-  <movies-card-grid [movies]="movies"></movies-card-grid>
 </div>
