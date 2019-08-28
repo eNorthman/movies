@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomepageComponent,
     HomepageOverviewComponent,
     HomepageDetailComponent,
+    // this would be a nice place to add the header component.
   ],
   imports: [UsersRoutingModule, FormsModule, CommonModule, HttpClientModule],
   providers: [],
