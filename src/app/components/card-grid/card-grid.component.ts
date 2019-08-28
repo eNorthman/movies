@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Movie } from 'src/app/pages/home/overview/models/movie-api.model';
 
 @Component({
@@ -6,12 +6,7 @@ import { Movie } from 'src/app/pages/home/overview/models/movie-api.model';
   templateUrl: './card-grid.component.html',
   styleUrls: ['./card-grid.component.scss']
 })
-export class CardGridComponent implements OnInit {
+export class CardGridComponent {
   @Input() movies: Movie[];
-
-  constructor() { }
-
-  public ngOnInit() {
-  }
 
 }
