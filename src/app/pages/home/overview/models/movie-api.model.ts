@@ -17,6 +17,8 @@ export interface MovieDetail {
   imdbID: string;
   Type: string;
   Poster: string;
+  Plot: string;
+  Country: string;
   Rated: string;
   Released: string;
   Genre: string;
@@ -26,7 +28,7 @@ export interface MovieDetail {
   Language: string;
   Awards: string;
   Ratings: Rating[];
-  Metascore: StringConstructor;
+  Metascore: string;
   imdbRating: string;
   imdbVotes: string;
   BoxOffice: string;

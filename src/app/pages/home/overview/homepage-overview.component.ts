@@ -23,6 +23,7 @@ export class HomepageOverviewComponent implements OnInit, OnDestroy {
 
   public ngOnInit() {
     this.subscription = this.cardService.cardClicked$.subscribe((cardObject: CardObject) => {
+      console.log('clicked!');
       if (cardObject.show) {
         // open card here
         this.show = cardObject.show;
