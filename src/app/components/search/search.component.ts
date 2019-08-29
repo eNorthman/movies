@@ -20,15 +20,7 @@ export class SearchComponent implements AfterViewInit {
 
   constructor() { }
 
-  public ngAfterViewInit() {
-    this.searchForm.valueChanges
-    .pipe(
-      distinctUntilChanged(),
-      debounceTime(500),
-      filter((value: SearchForm) => value && value.search && value.search.length > 2 ),
-    )
-    .subscribe(() => this.doSearch());
-  }
+  public ngAfterViewInit() {}
 
   public doSearch(): void {
     this.search.emit(this.searchText);

@@ -6,10 +6,7 @@ import { HomepageOverviewComponent } from './overview/homepage-overview.componen
 import { HomepageDetailComponent } from './detail/homepage-detail.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MovieService } from '../../services/movie.service';
 import { HttpClientModule } from '@angular/common/http';
-import { CardGridComponent } from 'src/app/components/card-grid/card-grid.component';
-import { CardComponent } from 'src/app/components/card/card.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @NgModule({
@@ -18,11 +15,9 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
     SearchComponent,
     HomepageOverviewComponent,
     HomepageDetailComponent,
-    CardGridComponent,
-    CardComponent,
     HeaderComponent,
   ],
-  imports: [UsersRoutingModule, FormsModule, CommonModule, HttpClientModule   ],
-  providers: [MovieService],
+  imports: [UsersRoutingModule, FormsModule, CommonModule, HttpClientModule],
+  providers: [],
 })
 export class HomepageModule { }

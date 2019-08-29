@@ -4,11 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 
-// Generic reuseable components like the header/menu component.
-import { CardService } from './services/card.service';
-import { StorageService } from './services/storage.service';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,10 +12,7 @@ import { StorageService } from './services/storage.service';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [
-    CardService,
-    StorageService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
