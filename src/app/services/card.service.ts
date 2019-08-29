@@ -10,6 +10,8 @@ export interface CardObject {
 @Injectable()
 export class CardService {
   public cardClicked$: Observable<CardObject>;
+  // a subject is a special type of Observable which can communicate to multiple Observers.
+  // From the docs: A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
   private $cardClicked: Subject<CardObject> = new Subject<CardObject>();
 
   constructor() {}
