@@ -3,7 +3,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { CardComponent } from './card.component';
 import { StorageService } from 'src/app/services/storage.service';
 import { CardService } from 'src/app/services/card.service';
-import { By } from '@angular/platform-browser';
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -47,35 +46,7 @@ describe('CardComponent', () => {
 
   describe('cardClicked', () => {
     it('should call the cardservice opencard method', () => {
-      spyOn(cardService, 'openCard');
-      component.cardClicked();
-      expect(cardService.openCard).toHaveBeenCalled();
-    });
-  });
 
-  describe('updateFavorite', () => {
-    it('should call storageservice addToFavorites', () => {
-      spyOn(storageService, 'addToFavorites');
-      spyOn(storageService, 'removeFromFavorites');
-
-      const button = fixture.debugElement.query(By.css('.movie__favorite'));
-      button.nativeElement.click();
-
-      expect(storageService.addToFavorites).toHaveBeenCalled();
-      expect(storageService.removeFromFavorites).not.toHaveBeenCalled();
-    });
-
-    it('should call storageservice addToFavorites', () => {
-      spyOn(storageService, 'addToFavorites');
-      spyOn(storageService, 'removeFromFavorites');
-      component.movie.Favorite = true;
-      fixture.detectChanges();
-
-      const button = fixture.debugElement.query(By.css('.movie__favorite'));
-      button.nativeElement.click();
-
-      expect(storageService.addToFavorites).not.toHaveBeenCalled();
-      expect(storageService.removeFromFavorites).toHaveBeenCalled();
     });
   });
 

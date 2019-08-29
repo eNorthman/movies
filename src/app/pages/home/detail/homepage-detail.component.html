@@ -1,34 +1,3 @@
-<div
-  class="details"
-  [class.details--show]="show"
-  *ngIf="movie"
->
-  <button type="button" class="details__close" (click)="show = false">
-    <i class="fas fa-times-circle"></i>
-  </button>
-
-  <div class="details__poster">
-    <img
-      class="details__image"
-      src="{{movie.Poster}}"
-    />
-  </div>
-  <div class="details-meta">
-    <span class="details-meta__title">{{movie.Title}}</span>
-    <span class="details-meta__year">{{movie.Year}}</span>
-    <div
-      *ngIf="movie.Plot"
-      class="details-meta__synopsis details-meta__block"
-    >
-      <span class="details-meta__heading">Synopsis</span>
-      <span class="details-meta__content">{{movie.Plot}}</span>
-    </div>
-    <div
-      *ngIf="movie.Actors"
-      class="details-meta__actors details-meta__block"
-    >
-      <span class="details-meta__heading">Actors</span>
-      <span class="details-meta__content">{{movie.Actors}}</span>
-    </div>
-  </div>
-</div>
+<div>
+  Movie detail page
+ </div>

@@ -10,18 +10,15 @@ export interface CardObject {
 @Injectable()
 export class CardService {
   public cardClicked$: Observable<CardObject>;
-
   private $cardClicked: Subject<CardObject> = new Subject<CardObject>();
 
-  constructor() {
-    this.cardClicked$ = this.$cardClicked.asObservable();
-  }
+  constructor() {}
 
   public openCard(movie: Movie): void {
-    this.$cardClicked.next({show: true, movie});
+    // throw an open event
   }
 
   public closeCard(): void {
-    this.$cardClicked.next({show: false});
+    // throw an closed event
   }
 }
