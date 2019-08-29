@@ -34,6 +34,6 @@ export class HomepageOverviewComponent implements OnInit, OnDestroy {
   public ngOnDestroy() {}
 
   public searchMovies(movieToFilter: string): void {
-    this.movies = this.mockMovies.filter(movie => movie.Title.includes(movieToFilter));
+    this.movies = this.mockMovies.filter(movie => movieToFilter && movie.Title.includes(movieToFilter));
   }
 }
