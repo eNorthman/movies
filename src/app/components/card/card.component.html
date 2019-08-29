@@ -1,0 +1,24 @@
+
+<div class="movie" (click)="cardClicked()">
+  <div class="movie__poster">
+    <img class="movie__image" [src]="movie.Poster" alt="Poster: {{'something overhere *hint*'}}">
+  </div>
+  <div class="movie__body">
+    <div class="movie__meta">
+      <span class="movie__title"></span>
+      <span class="movie__year"></span>
+    </div>
+    <button
+    type="button"
+    class="movie__favorite"
+    (click)="updateFavorite($event)"
+    >
+      <span *ngIf="!movie.Favorite">
+        <i class="far fa-star"></i>
+      </span>
+      <span *ngIf="movie.Favorite">
+      <i class="fas fa-star"></i>
+      </span>
+    </button>
+  </div>
+</div>

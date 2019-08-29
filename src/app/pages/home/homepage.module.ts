@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from 'src/app/components/header/header.component';
+import { CardGridComponent } from 'src/app/components/card-grid/card-grid.component';
+import { CardComponent } from 'src/app/components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
     HomepageOverviewComponent,
     HomepageDetailComponent,
     HeaderComponent,
+    CardGridComponent,
+    CardComponent,
   ],
   imports: [UsersRoutingModule, FormsModule, CommonModule, HttpClientModule],
   providers: [],
