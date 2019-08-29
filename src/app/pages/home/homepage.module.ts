@@ -22,7 +22,7 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
     CardComponent,
     HeaderComponent,
   ],
-  imports: [UsersRoutingModule, FormsModule, CommonModule, HttpClientModule   ],
+  imports: [UsersRoutingModule, FormsModule, CommonModule, HttpClientModule],
   providers: [MovieService],
 })
 export class HomepageModule { }

@@ -10,25 +10,25 @@
   <div class="details__poster">
     <img
       class="details__image"
-      src="{{movie.Poster}}"
+      src=""
     />
   </div>
   <div class="details-meta">
     <span class="details-meta__title">{{movie.Title}}</span>
-    <span class="details-meta__year">{{movie.Year}}</span>
+    <span class="details-meta__year"></span>
     <div
       *ngIf="movie.Plot"
       class="details-meta__synopsis details-meta__block"
     >
       <span class="details-meta__heading">Synopsis</span>
-      <span class="details-meta__content">{{movie.Plot}}</span>
+      <span class="details-meta__content"></span>
     </div>
     <div
       *ngIf="movie.Actors"
       class="details-meta__actors details-meta__block"
     >
       <span class="details-meta__heading">Actors</span>
-      <span class="details-meta__content">{{movie.Actors}}</span>
+      <span class="details-meta__content"></span>
     </div>
   </div>
 </div>
