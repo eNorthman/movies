@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Movie } from '../../pages/home/overview/models/movie-api.model';
 import { CardService } from 'src/app/services/card.service';
-import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'movies-card',
@@ -10,10 +9,9 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class CardComponent {
   @Input() movie: Movie;
-
+  // storage service is missing!
   constructor(
     private readonly cardService: CardService,
-    private readonly storageService: StorageService
   ) { }
 
   public cardClicked(): void {
@@ -21,11 +19,8 @@ export class CardComponent {
   }
 
   public updateFavorite(event: Event): void {
+    // prevent the event from bubling
     event.stopPropagation();
-    if (this.movie.Favorite) {
-      this.storageService.removeFromFavorites(this.movie);
-    } else {
-      this.storageService.addToFavorites(this.movie);
-    }
+    // Add logic here to add and remove favorites throught our storage service.
   }
 }
