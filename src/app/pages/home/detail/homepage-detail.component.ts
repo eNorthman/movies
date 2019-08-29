@@ -12,19 +12,10 @@ export class HomepageDetailComponent implements OnInit {
   public show = true;
   public movie: MovieApi;
 
-  constructor(
-    private readonly movieService: MovieService
-  ) { }
+  constructor() { }
 
-  public ngOnInit() {
-    this.getMovieDetails();
-  }
+  public ngOnInit() {}
 
-  private getMovieDetails(): void {
-    const endpoint = HOMEPAGE_DETAIL_API_CONSTANTS.getMovieDetails(this.selectedMovie.Title);
-    this.movieService.getAllMovieByTitle(endpoint).subscribe((result: MovieApi) => {
-      this.movie = result;
-    });
-  }
+  private getMovieDetails(): void {}
 
 }
