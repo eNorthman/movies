@@ -34,6 +34,11 @@ export class HomepageOverviewComponent implements OnInit, OnDestroy {
     });
   }
 
+  public handleClose(): void {
+    this.show = false;
+    // this.selectedMovie.show = false;
+  }
+
   public ngOnDestroy() {
     this.subscription.unsubscribe();
   }

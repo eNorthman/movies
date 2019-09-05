@@ -1,4 +1,4 @@
-<movies-detail *ngIf="show" [selectedMovie]="selectedMovie"></movies-detail>
+<movies-detail *ngIf="show" [selectedMovie]="selectedMovie" (closedDialog)="handleClose()"></movies-detail>
 
 <div class="container">
   <movies-header></movies-header>

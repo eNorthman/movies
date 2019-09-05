@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MovieService } from 'src/app/services/movie.service';
 import { HOMEPAGE_DETAIL_API_CONSTANTS } from './constants/homepage-detail-constants';
 import { MovieApi, Movie } from '../overview/models/movie-api.model';
@@ -9,6 +9,7 @@ import { MovieApi, Movie } from '../overview/models/movie-api.model';
 })
 export class HomepageDetailComponent implements OnInit {
   @Input() public selectedMovie: Movie;
+  @Output() public closedDialog: EventEmitter<boolean> = new EventEmitter();
   public show = true;
   public movie: MovieApi;
 
@@ -18,6 +19,10 @@ export class HomepageDetailComponent implements OnInit {
 
   public ngOnInit() {
     this.getMovieDetails();
+  }
+
+  public closeDialog(): void {
+    this.closedDialog.emit(false);
   }
 
   private getMovieDetails(): void {
